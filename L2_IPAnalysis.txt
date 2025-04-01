@@ -1,12 +1,12 @@
 Vi chiediamo di analizzare i seguenti indirizzi IP e determinare gli elementi: 
 
 ● 128.1.6.5/12 
-  IP: 				    1000 0000. 0000  0001. 0000 0110. 0000 0101 -> 128.1.6.5
-  SUBMASK: 			  1111 1111. 1111  0000. 0000 0000. 0000 0000 -> 255.240.0.0
-  IP NETWORK: 		1000 0000. 0000  0000. 0000 0000. 0000 0000 -> 128.0.0.0
+  IP: 				                      1000 0000. 0000  0001. 0000 0110. 0000 0101 -> 128.1.6.5
+  SUBMASK: 			                    1111 1111. 1111  0000. 0000 0000. 0000 0000 -> 255.240.0.0
+  IP NETWORK: 		                  1000 0000. 0000  0000. 0000 0000. 0000 0000 -> 128.0.0.0
   IP GATEWAY 'convenzionale' (min): 1000 0000. 0000  0000. 0000 0000. 0000 0001 -> 128.0.0.1 
   IP GATEWAY 'convenzionale' (max): 1000 0000. 0000  1111. 1111 1111. 1111 1110 -> 128.15.255.254
-  IP BROADCAST: 	1000 0000. 0000  1111. 1111 1111. 1111 1111 -> 128.15.255.255
+  IP BROADCAST: 	                  1000 0000. 0000  1111. 1111 1111. 1111 1111 -> 128.15.255.255
   Ottetti per gli host: 2.5 (ultimi 2 + 4bit del terzultimo)
   Ottetti per la network: 1.5 (il primo + 4bit del secondo)
   n. host: 2^(32-12) - 2 = 2^20 - 2 = 1.048.576 - 2 = 1.048.574
