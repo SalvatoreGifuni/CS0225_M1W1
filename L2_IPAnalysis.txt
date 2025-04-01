@@ -43,8 +43,8 @@ Vi chiediamo di analizzare i seguenti indirizzi IP e determinare gli elementi:
   IP GATEWAY 'convenzionale' (min): 0111 1110. 0 000 0000. 0000 0000. 0000 0001 -> 126.0.0.1 
   IP GATEWAY 'convenzionale' (max): 0111 1110. 0 111 1111. 1111 1111. 1111 1110 -> 126.127.255.254
   IP BROADCAST: 	                  0111 1110. 0 111 1111. 1111 1111. 1111 1111 -> 128.127.255.255
-  Ottetti per gli host: 2.88 (ultimi 2 + 7bit del terzultimo)
-  Ottetti per la network: 1.13 (il primo + 1bit del secondo)
+  Ottetti per gli host: 2.875 (ultimi 2 + 7bit del terzultimo)
+  Ottetti per la network: 1.125 (il primo + 1bit del secondo)
   n. host: 2^(32-9) - 2 = 2^23 - 2 = 8.388.606
 
 
