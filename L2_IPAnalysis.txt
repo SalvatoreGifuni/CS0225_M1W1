@@ -1,0 +1,72 @@
+Vi chiediamo di analizzare i seguenti indirizzi IP e determinare gli elementi: 
+
+● 128.1.6.5/12 
+  IP: 				    1000 0000. 0000  0001. 0000 0110. 0000 0101 -> 128.1.6.5
+  SUBMASK: 			    1111 1111. 1111  0000. 0000 0000. 0000 0000 -> 255.240.0.0
+  IP NETWORK: 			    1000 0000. 0000  0000. 0000 0000. 0000 0000 -> 128.0.0.0
+  IP GATEWAY 'convenzionale' (min): 1000 0000. 0000  0000. 0000 0000. 0000 0001 -> 128.0.0.1 
+  IP GATEWAY 'convenzionale' (max): 1000 0000. 0000  1111. 1111 1111. 1111 1110 -> 128.15.255.254
+  IP BROADCAST: 	            1000 0ipcalc 200000. 0000  1111. 1111 1111. 1111 1111 -> 128.15.255.255
+  Ottetti per gli host: 2.5 (ultimi 2 ottetti + 4bit del terzultimo)
+  Ottetti per la network: 1.5 (il primo + 4bit del secondo)
+  n. host: 2^(32-12) - 2 = 2^20 - 2 = 1.048.576 - 2 = 1.048.574
+
+
+● 200.1.2.3/24
+  IP: 				    1100 1000. 0000 0001. 0000 0010. 0000 0011 -> 200.1.2.3
+  SUBMASK: 			    1111 1111. 1111 1111. 1111 1111. 0000 0000 -> 255.255.255.0
+  IP NETWORK: 			    1100 1000. 0000 0001. 0000 0010. 0000 0000 -> 200.1.2.0
+  IP GATEWAY 'convenzionale' (min): 1100 1000. 0000 0001. 0000 0010. 0000 0001 -> 200.1.2.1 
+  IP GATEWAY 'convenzionale' (max): 1100 1000. 0000 0001. 0000 0010. 1111 1110 -> 200.1.2.254
+  IP BROADCAST: 	            1100 1000. 0000 0001. 0000 0010. 1111 1111 -> 200.1.2.255
+  Ottetti per gli host: 1 (l'ultimo ottetto)
+  Ottetti per la network: 3 (i primi tre)
+  n. host: 2^(32-24) - 2 = 2^8 - 2 = 254
+
+
+● 192.192.1.1/22
+  IP: 				    1100 0000. 1100 0000. 0000 00 01. 0000 0001 -> 192.192.1.1
+  SUBMASK: 			    1111 1111. 1111 1111. 1111 11 00. 0000 0000 -> 255.255.252.0
+  IP NETWORK: 			    1100 0000. 1100 0000. 0000 00 00. 0000 0000 -> 192.192.0.0
+  IP GATEWAY 'convenzionale' (min): 1100 0000. 1100 0000. 0000 00 00. 0000 0001 -> 192.192.0.1 
+  IP GATEWAY 'convenzionale' (max): 1100 0000. 1100 0000. 0000 00 11. 1111 1110 -> 192.192.3.254
+  IP BROADCAST: 	            1100 0000. 1100 0000. 0000 00 11. 1111 1111 -> 192.192.3.255
+  Ottetti per gli host: 1.3 (ultimo + 2bit del terzultimo)
+  Ottetti per la network: 2.7 (i primi 2 + 6bit del secondo)
+  n. host: 2^(32-22) - 2 = 2^10 - 2 = 1.022
+ 
+
+● 126.5.4.3/9 
+  IP: 				    0111 1110. 0 000 0101. 0000 0100. 0000 0011 -> 126.5.4.3
+  SUBMASK: 			    1111 1111. 1 000 0000. 0000 0000. 0000 0000 -> 255.128.0.0
+  IP NETWORK: 			    0111 1110. 0 000 0000. 0000 0000. 0000 0000 -> 126.0.0.0
+  IP GATEWAY 'convenzionale' (min): 0111 1110. 0 000 0000. 0000 0000. 0000 0001 -> 126.0.0.1 
+  IP GATEWAY 'convenzionale' (max): 0111 1110. 0 111 1111. 1111 1111. 1111 1110 -> 126.127.255.254
+  IP BROADCAST: 	            0111 1110. 0 111 1111. 1111 1111. 1111 1111 -> 128.127.255.255
+  Ottetti per gli host: 2.7 (ultimi 2 ottetti + 3bit del terzultimo)
+  Ottetti per la network: 1.3 (il primo + 1 bit del secondo)
+  n. host: 2^(32-9) - 2 = 2^23 - 2 = 8.388.606
+
+
+● 200.1.9.8/24 
+  IP: 				    1100 1000. 0000 0001. 0000 1001. 0000 1000 -> 200.1.9.8
+  SUBMASK: 			    1111 1111. 1111 1111. 1111 1111. 0000 0000 -> 255.255.255.0
+  IP NETWORK: 			    1100 1000. 0000 0001. 0000 1001. 0000 0000 -> 200.1.9.0
+  IP GATEWAY 'convenzionale' (min): 1100 1000. 0000 0001. 0000 1001. 0000 0001 -> 200.1.9.1 
+  IP GATEWAY 'convenzionale' (max): 1100 1000. 0000 0001. 0000 1001. 1111 1110 -> 200.1.9.254
+  IP BROADCAST: 	            1100 1000. 0000 0001. 0000 1001. 1111 1111 -> 200.1.9.255
+  Ottetti per gli host: 1 (l'ultimo ottetto)
+  Ottetti per la network: 3 (i primi tre)
+  n. host: 2^(32-24) - 2 = 2^8 - 2 = 254
+
+
+● 172.16.0.4/16
+  IP: 				    1010 1100. 0001 0000. 0000 0000. 0000 0100 -> 172.16.0.4
+  SUBMASK: 			    1111 1111. 1111 1111. 0000 0000. 0000 0000 -> 255.255.0.0
+  IP NETWORK: 			    1010 1100. 0001 0000. 0000 0000. 0000 0000 -> 172.16.0.0
+  IP GATEWAY 'convenzionale' (min): 1010 1100. 0001 0000. 0000 0000. 0000 0001 -> 172.16.0.1 
+  IP GATEWAY 'convenzionale' (max): 1010 1100. 0001 0000. 1111 1111. 1111 1110 -> 172.16.255.254
+  IP BROADCAST: 	            1100 1000. 0000 0001. 1111 1111. 1111 1111 -> 172.16.255.255
+  Ottetti per gli host: 2 (gli ultimi 2, i primi 2 sono per il network)
+  Ottetti per la network: 2 (i primi tre sono per la network)
+  n. host: 2^(32-16) - 2 = 2^16 - 2 = 65.534
